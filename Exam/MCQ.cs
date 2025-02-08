@@ -30,6 +30,7 @@ namespace Exam
 
         public override void DisplayQuestion()
         {
+            Console.WriteLine($"{Header}");
             Console.WriteLine($"{Body}");
             for (int i = 0; i < 3; i++)
             {

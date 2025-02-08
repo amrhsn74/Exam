@@ -16,7 +16,6 @@ namespace Exam
         #endregion
 
         #region Methods
-
         public virtual void StartExam() { }
         #endregion
     }

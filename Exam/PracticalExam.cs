@@ -21,7 +21,7 @@ namespace Exam
             NumberOfQuestions = int.Parse(Console.ReadLine());
             QuestionList = new Question[NumberOfQuestions];
             Console.Clear();
-            for (int i = 0; i < NumberOfQuestions; i++)
+            for (int i = 0; i < QuestionList.Length; i++)
             {
                 QuestionList[i] = new MCQ();
             }
@@ -38,8 +38,7 @@ namespace Exam
             stopwatch.Start();
             int[] user_ans = new int[NumberOfQuestions];
             int total = 0;
-            Console.WriteLine($"Exam Time: {Time}");
-            Console.WriteLine("Number of Questions: " + NumberOfQuestions);
+            QuestionList = new Question[NumberOfQuestions];
             for (int i = 0; i < QuestionList.Length; i++)
             {
                 Console.WriteLine($"{QuestionList[i].Header}");
@@ -55,7 +54,7 @@ namespace Exam
             Console.Clear();
             stopwatch.Stop();
             TimeSpan timer = stopwatch.Elapsed;
-            for (int i = 0; i < NumberOfQuestions; i++)
+            for (int i = 0; i < QuestionList.Length; i++)
             {
                 Console.WriteLine($"Your Answers: {user_ans[i]}");
             }

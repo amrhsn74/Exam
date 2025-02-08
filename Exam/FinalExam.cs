@@ -19,8 +19,9 @@ namespace Exam
             } while (Time < 30 || Time > 180);
             Console.WriteLine("Please Enter The Number Of Questions");
             NumberOfQuestions = int.Parse(Console.ReadLine());
+            QuestionList = new Question[NumberOfQuestions];
             Console.Clear();
-            for (int i = 0; i < NumberOfQuestions; i++)
+            for (int i = 0; i < QuestionList.Length; i++)
             {
                 Console.WriteLine("Please Enter The Type of Question (1 For MCQ | 2 For True | False)");
                 int _type = int.Parse(Console.ReadLine());
@@ -48,12 +49,10 @@ namespace Exam
             int[] user_ans = new int[NumberOfQuestions];
             int total_user = 0;
             int total_marks = 0;
-            Console.WriteLine($"Exam Time: {Time}");
-            Console.WriteLine("Number of Questions: " + NumberOfQuestions);
             for (int i = 0; i < QuestionList.Length; i++)
             {
                 total_marks += QuestionList[i].Mark;
-                Console.WriteLine($"Question {i + 1}: Marks {QuestionList[i].Mark}");
+                Console.WriteLine($"Question {i + 1}:    Marks {QuestionList[i].Mark}");
                 QuestionList[i].DisplayQuestion();
                 Console.WriteLine("Enter your answer");
                 user_ans[i] = Convert.ToInt32(Console.ReadLine());
@@ -65,7 +64,7 @@ namespace Exam
             Console.Clear();
             stopwatch.Stop();
             TimeSpan timer = stopwatch.Elapsed;
-            for (int i = 0; i < NumberOfQuestions; i++)
+            for (int i = 0; i < QuestionList.Length; i++)
             {
                 QuestionList[i].DisplayQuestion();
                 Console.WriteLine($"Q{i + 1})\t{QuestionList[i].Body}: {QuestionList[i].Answers[user_ans[i] - 1].AnsText}");

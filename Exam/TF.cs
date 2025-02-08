@@ -28,7 +28,8 @@ namespace Exam
 
         public override void DisplayQuestion()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"{Header}");
+            Console.WriteLine($"{Body}");
         }
 
         public override void MakeQuestion()
