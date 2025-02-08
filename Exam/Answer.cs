@@ -10,5 +10,6 @@ namespace Exam
     {
         public int AnsID { get; set; }
         public string? AnsText { get; set; }
+
     }
 }

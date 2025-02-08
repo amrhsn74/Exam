@@ -10,8 +10,24 @@ namespace Exam
     {
         public int SubjectID { get; set; }
         public string? SubjectName { get; set; }
-        public Exam ExamOfSubject { get; set; }
+        public Exam SubjectExam { get; set; }
 
+        public Subject()
+        {
+
+            Console.WriteLine("Please Enter The Type Of Exam ( 1 For Practical | 2 For Final)");
+            int Type = int.Parse(Console.ReadLine());
+            switch (Type)
+            {
+                case 1:
+                    SubjectExam = new PracticalExam();
+                    break;
+                case 2:
+                    SubjectExam = new FinalExam();
+                    break;
+            }
+
+        }
 
     }
 }
