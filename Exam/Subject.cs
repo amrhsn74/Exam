@@ -17,7 +17,9 @@ namespace Exam
             this.SubjectID = SubjectID;
             this.SubjectName = SubjectName;
             Console.WriteLine("Please Enter The Type Of Exam ( 1 For Practical | 2 For Final)");
-            Console.Clear();
+            // 1.
+            
+            //Console.Clear();
             int Type = int.Parse(Console.ReadLine());
             switch (Type)
             {

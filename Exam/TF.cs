@@ -32,17 +32,17 @@ namespace Exam
             Console.WriteLine($"{Body}");
         }
 
-        public override void MakeQuestion()
-        {
-            Console.WriteLine($"{Header}");
-            Console.WriteLine("Please Enter Question Body");
-            Body = Console.ReadLine();
-            Console.WriteLine("Please Enter Question Mark");
-            Mark = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Please Enter The Right Answer ID ( 1 For True | 2 For False )");
-            RightAnswer = Convert.ToInt32(Console.ReadLine());
-            Console.Clear();
-        }
+        //public override void MakeQuestion()
+        //{
+        //    Console.WriteLine($"{Header}");
+        //    Console.WriteLine("Please Enter Question Body");
+        //    Body = Console.ReadLine();
+        //    Console.WriteLine("Please Enter Question Mark");
+        //    Mark = Convert.ToInt32(Console.ReadLine());
+        //    Console.WriteLine("Please Enter The Right Answer ID ( 1 For True | 2 For False )");
+        //    RightAnswer = Convert.ToInt32(Console.ReadLine());
+        //    Console.Clear();
+        //}
 
     }
 }

@@ -20,7 +20,9 @@ namespace Exam
         #region Methods
 
         public abstract void DisplayQuestion();
-        public abstract void MakeQuestion();
+        //2.
+
+        // public abstract void MakeQuestion();
 
         #endregion
 

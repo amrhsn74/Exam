@@ -38,7 +38,7 @@ namespace Exam
             stopwatch.Start();
             int[] user_ans = new int[NumberOfQuestions];
             int total = 0;
-            QuestionList = new Question[NumberOfQuestions];
+            //QuestionList = new Question[NumberOfQuestions];
             for (int i = 0; i < QuestionList.Length; i++)
             {
                 Console.WriteLine($"{QuestionList[i].Header}");

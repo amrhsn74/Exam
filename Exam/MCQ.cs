@@ -25,6 +25,8 @@ namespace Exam
                 Console.WriteLine($"Please Enter Choice Number {i + 1}");
                 Answers[i].AnsText = Console.ReadLine();
             }
+            Console.WriteLine("Enter Right Answer ID");
+            RightAnswer = Convert.ToInt32(Console.ReadLine());
             Console.Clear();
         }
 
@@ -38,22 +40,22 @@ namespace Exam
             }
         }
 
-        public override void MakeQuestion()
-        {
-            Console.WriteLine($"{Header}");
-            Console.WriteLine("Please Enter Question Body");
-            Body = Console.ReadLine();
-            Console.WriteLine("Please Enter Question Mark");
-            Mark = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Choices Of Question");
-            for (int i = 0; i < 3; i++)
-            {
-                Answers[i] = new Answer();
-                Console.WriteLine($"Please Enter Choice Number {i + 1}");
-                Answers[i].AnsText = Console.ReadLine();
-            }
-            Console.Clear();
-        }
+        //public override void MakeQuestion()
+        //{
+        //    Console.WriteLine($"{Header}");
+        //    Console.WriteLine("Please Enter Question Body");
+        //    Body = Console.ReadLine();
+        //    Console.WriteLine("Please Enter Question Mark");
+        //    Mark = Convert.ToInt32(Console.ReadLine());
+        //    Console.WriteLine("Choices Of Question");
+        //    for (int i = 0; i < 3; i++)
+        //    {
+        //        Answers[i] = new Answer();
+        //        Console.WriteLine($"Please Enter Choice Number {i + 1}");
+        //        Answers[i].AnsText = Console.ReadLine();
+        //    }
+        //    Console.Clear();
+        //}
 
     }
 }
